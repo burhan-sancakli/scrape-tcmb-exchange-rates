@@ -7,7 +7,7 @@ from drive_utility import upload_photo
 
 # Define start and end dates
 start_date = datetime(2022, 12, 30)
-end_date = datetime(2023, 2, 28)  # datetime.today()
+end_date = datetime.today()
 
 # Path to the Excel file
 output_file_path = r'./tcmb_currency_data.xlsx'
