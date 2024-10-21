@@ -65,7 +65,10 @@ while current_date <= end_date:
             forex_selling = currency.find('ForexSelling').text
             banknote_buying = currency.find('BanknoteBuying').text
             banknote_selling = currency.find('BanknoteSelling').text
-
+            if forex_buying: forex_buying.replace(".",",")
+            if forex_selling: forex_selling.replace(".",",")
+            if banknote_buying: banknote_buying.replace(".",",")
+            if banknote_selling: banknote_selling.replace(".",",")
             # Append the data for the current day
             current_day_data.append({
                 'Date': current_date.strftime('%Y-%m-%d'),
